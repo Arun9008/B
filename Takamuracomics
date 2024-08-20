@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TakamuraComics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="logo.png" alt="TakamuraComics Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Originals</a></li>
+                    <li><a href="#">Genres</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Canvas</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="#" class="publish-btn">Publish</a>
+                <a href="#" class="login-btn">Log In</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Banner -->
+    <section class="banner">
+        <img src="banner.jpg" alt="Banner Image">
+    </section>
+
+    <!-- Weekly Updates -->
+    <section class="weekly-updates">
+        <div class="weekly-header">
+            <h2>Weekly Updates</h2>
+            <div class="day-tabs">
+                <button>Mon</button>
+                <button class="active">Tue</button>
+                <button>Wed</button>
+                <button>Thu</button>
+                <button>Fri</button>
+                <button>Sat</button>
+                <button>Sun</button>
+            </div>
+        </div>
+        <div class="comics-list">
+            <!-- Comic item -->
+            <div class="comic-item">
+                <img src="comic1.jpg" alt="Comic 1">
+                <h3>The Mafia Nanny</h3>
+                <p>4.7M views</p>
+            </div>
+            <div class="comic-item">
+                <img src="comic2.jpg" alt="Comic 2">
+                <h3>Down To Earth</h3>
+                <p>24.2M views</p>
+            </div>
+            <!-- Add more comic items as needed -->
+        </div>
+    </section>
+
+    <!-- New to TakamuraComics -->
+    <section class="new-webtoon">
+        <h2>New to TakamuraComics</h2>
+        <div class="comics-list">
+            <!-- Comic item -->
+            <div class="comic-item">
+                <img src="new-comic1.jpg" alt="New Comic 1">
+                <h3>The Cup of Vengeance</h3>
+                <p>290.9K views</p>
+            </div>
+            <div class="comic-item">
+                <img src="new-comic2.jpg" alt="New Comic 2">
+                <h3>SHIRAI</h3>
+                <p>6.1M views</p>
+            </div>
+            <!-- Add more comic items as needed -->
+        </div>
+    </section>
+
+    <!-- Genres -->
+    <section class="genres">
+        <h2>Genres</h2>
+        <div class="genres-list">
+            <div class="genre-item">
+                <h3>Sports</h3>
+            </div>
+            <div class="genre-item">
+                <h3>Superhero</h3>
+            </div>
+            <!-- Add more genre items as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TakamuraComics. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F9E5C4; /* Light beige background */
+}
+
+header {
+    background-color: #DE613B; /* Main color from logo */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White text for nav */
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    color: #F9E5C4; /* Hover color from background */
+}
+
+.header-right .publish-btn {
+    background-color: #333; /* Dark color for button */
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.header-right .login-btn {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-right .login-btn:hover {
+    color: #F9E5C4;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.weekly-updates,
+.new-webtoon,
+.genres {
+    padding: 20px;
+    background-color: #FFF4E5; /* Light cream color */
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.weekly-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weekly-updates h2,
+.new-webtoon h2,
+.genres h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #DE613B; /* Main color */
+}
+
+.day-tabs {
+    display: flex;
+    gap: 5px;
+}
+
+.day-tabs button {
+    padding: 8px 12px;
+    border: 1px solid #DE613B;
+    background-color: #F9E5C4; /* Light beige */
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.day-tabs button.active,
+.day-tabs button:hover {
+    background-color: #DE613B; /* Main color */
+    color: #fff;
+}
+
+.comics-list {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 15px 0;
+}
+
+.comic-item {
+    flex: 0 0 150px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.comic-item:hover {
+    transform: scale(1.05);
+}
+
+.comic-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.comic-item h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.comic-item p {
+    font-size: 14px;
+    color: #777;
+}
+
+.genres-list {
+    display: flex;
+    gap: 15px;
+}
+
+.genre-item {
+    flex: 0 0 200px;
+    background-color: #DE613B;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+}
+
+.genre-item h3 {
+    font-size: 18px;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
